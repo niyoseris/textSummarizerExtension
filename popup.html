@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Text Helper</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .api-key-section, .language-section {
+      margin-bottom: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3367d6;
+    }
+
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      min-height: 50px;
+      max-height: 200px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .success {
+      color: #28a745;
+    }
+
+    .error {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="api-key-section">
+      <label for="apiKey" id="apiKeyLabel">API Key:</label>
+      <input type="password" id="apiKey" placeholder="Enter your API key">
+      <button id="saveApiKey">Save</button>
+    </div>
+    
+    <div class="language-section">
+      <label for="language" id="languageLabel">Language:</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="zh">中文</option>
+      </select>
+    </div>
+    
+    <div id="result"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
